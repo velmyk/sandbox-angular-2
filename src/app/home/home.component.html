@@ -1,2 +1,50 @@
-<h3>Home Component</h3>
-<p>Welcome to Angular Seed</p>
+<div class="container">
+    <h3>Home Component</h3>
+    <form #myForm="ngForm"
+        novalidate>
+        <div class="form-group">
+            <label>First name</label>
+            <input class="form-control" type="text" required name="firstName" [(ngModel)]="model.firstName">
+        </div>
+        <div class="form-group">
+            <label>Last name</label>
+            <input class="form-control" type="text" required name="lastName" [(ngModel)]="model.lastName">
+        </div>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" name="isFullTime" [(ngModel)]="model.isFullTime">
+                Full time employee
+            </label>
+        </div>
+        <label>Payment type</label>
+        <div class="radio">
+            <label>
+                <input type="radio" name="paymentType" value="w2" checked
+                    [(ngModel)]="model.paymentType">
+                W2
+            </label>
+        </div>
+        <div class="radio">
+            <label>
+                <input type="radio" name="paymentType" value="1099"
+                    [(ngModel)]="model.paymentType">
+                1099
+            </label>
+        </div>
+        <div class="form-group">
+            <label>Primary language</label>
+            <select class="form-control"
+                name="primaryLanguage"
+                [(ngModel)]="model.primaryLanguage">
+                <option *ngFor="let language of languages">{{ language }}</option>
+            </select>
+        </div>
+        <button class="btn btn-primary" type="submit"> Ok </button>
+    </form>
+</div>
+
+<pre>Model: {{ model | json }}</pre>
+<br>
+<pre>Angular: {{ myForm.value | json }}</pre>
+
+<pre style="margin-top: 30px;">{{ myForm.pristine }}</pre>
