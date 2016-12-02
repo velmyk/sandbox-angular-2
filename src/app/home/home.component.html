@@ -48,6 +48,18 @@
                 <option *ngFor="let language of languages">{{ language }}</option>
             </select>
         </div>
+        <div style="display: inline-block;">
+            <datepicker name="startDate" [(ngModel)]="startDate" [showWeeks]="false">
+            </datepicker>
+        </div>
+        <timepicker [(ngModel)]="startTime" name="startTime" [minuteStep]="15"></timepicker>
+        <button type="button" class="btn" name="onOffSwitcher"
+                [class.btn-primary]="onOffSwitcher === 'On'"
+                [class.btn-danger]="onOffSwitcher === 'Off'"
+                    [(ngModel)]="onOffSwitcher" btnCheckbox
+                    btnCheckboxTrue="On" btnCheckboxFalse="Off">
+            {{ onOffSwitcher }}
+        </button>
         <button class="btn btn-primary" type="submit" [disabled]="myForm.invalid"> Ok </button>
     </form>
 </div>

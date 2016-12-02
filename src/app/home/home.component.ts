@@ -11,9 +11,10 @@ import { EmployeeService } from './employee.service';
 })
 export class HomeComponent {
   languages: Array<string> = [];
-
+  startTime: Date;
+  startDate: Date;
+  onOffSwitcher: string = 'Off';
   model = new Employee('Darla', 'Smith', true, 'w2', 'default');
-
   hasPrimaryLanguageError = false;
 
   constructor(private employeeService: EmployeeService) {

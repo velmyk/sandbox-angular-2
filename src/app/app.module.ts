@@ -6,6 +6,7 @@ import { GithubService } from './github/shared/github.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
+import { DatepickerModule, TimepickerModule, ButtonsModule } from 'ng2-bootstrap/ng2-bootstrap';
 
 import { AboutComponent } from './about/about.component';
 import { HomeComponent } from './home/home.component';
@@ -32,7 +33,10 @@ import { EmployeeService } from './home/employee.service';
     FormsModule,
     ReactiveFormsModule,
     HttpModule,
-    RouterModule.forRoot(rootRouterConfig, { useHash: true })
+    RouterModule.forRoot(rootRouterConfig, { useHash: true }),
+    DatepickerModule,
+    TimepickerModule,
+    ButtonsModule
   ],
   providers: [
     GithubService,
