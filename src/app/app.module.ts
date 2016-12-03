@@ -15,6 +15,7 @@ import { RepoListComponent } from './github/repo-list/repo-list.component';
 import { RepoDetailComponent } from './github/repo-detail/repo-detail.component';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { ContactComponent } from './contact/contact.component';
+import { ReactiveFormComponent } from './reactive-forms/reactive-form.component';
 
 import { EmployeeService } from './home/employee.service';
 
@@ -26,7 +27,8 @@ import { EmployeeService } from './home/employee.service';
     RepoListComponent,
     RepoDetailComponent,
     HomeComponent,
-    ContactComponent
+    ContactComponent,
+    ReactiveFormComponent
   ],
   imports: [
     BrowserModule,

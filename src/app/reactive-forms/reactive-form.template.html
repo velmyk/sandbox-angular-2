@@ -1,0 +1,26 @@
+<div class="container">
+    <h4>Reactive Form</h4>
+    <form class="form-content" [formGroup]="registerForm">
+        <label>Firstname:</label>
+        <input type="text" class="form-control" formControlName="firstname">
+        <p *ngIf="registerForm.controls.firstname.errors">This field is required!</p>
+
+        <label>Lastname:</label>
+        <input type="text" class="form-control" formControlName="lastname">
+
+        <fieldset class="form-group" formGroupName="address">
+            <label>Street:</label>
+            <input type="text" class="form-control" formControlName="street">
+
+            <div class="form-horizontal">
+                <label>Zip:</label>
+                <input type="text" class="form-control" formControlName="zip">
+
+                <label>City:</label>
+                <input type="text" class="form-control" formControlName="city">
+            </div>
+        </fieldset>
+
+        <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+</div>
